@@ -1,0 +1,520 @@
+/* Estilos generales */ 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+}
+
+/* Sección Hero DISCOUNT 50% */
+.hero {
+    width: 100%;
+    min-width: 1440px;
+    min-height: 1200px;
+    background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('./images/HERO.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    width: 100%;
+    height: auto;
+    margin: 30px 0;
+    padding: 0 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header img {
+    width: 100px;
+    height: auto;
+}
+
+header ul {
+    display: flex;
+    gap: 50px;
+    list-style: none;
+}
+
+header a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.link i {
+    color: white;
+    font-size: 50px;
+    cursor: pointer;
+}
+
+.hero-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 90px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 0.8;
+}
+
+.hero-content p {
+    max-width: 800px;
+    font-size: 20px;
+    margin-bottom: 40px;
+    line-height: 1.4;
+}
+
+.boton {
+    background-color: #f6d365;
+    color: #333333;
+    padding: 15px 50px;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+/*Inicio estilos Sección 2 POPULAR MENU*/
+.sec2-box {
+    width: 100%;
+    min-width: 1440px;
+    min-height: 1000px;
+    background-image: url('./images/Design.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.sec2-box h1 {
+    font-size: 60px; 
+    font-weight: 700;
+    color: #333333;
+    margin-bottom: 20px;
+}
+
+.sec2-box > p {
+    max-width: 600px;
+    margin-bottom: 60px;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #333333;
+    padding: 0 20px;
+}
+
+
+.menu-container {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 40px;
+  
+}
+
+.package {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.package img {
+    width: 400px;
+    height: auto; 
+    margin-bottom: 25px;
+    border-radius: 5px;
+}
+
+.package h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #313131;
+    margin-bottom: 10px;
+}
+
+.package p {
+    font-size: 16px;
+    color: #333333;
+    max-width: 280px;
+    line-height: 1.4;
+}
+/*Inicio estilos Sección 3 CHICKEN WINGS*/
+
+.sec3-box {
+    width: 100%;
+    min-width: 1440px;
+    min-height: 1200px;
+    background-image: url('./images/Design 2.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.sec3-content {
+    display: flex;
+    flex-direction: row; /* Cambiado a row para alinear la imagen a la derecha */
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    gap: 50px;
+}
+
+.sec3-content img {
+    width: 45%;
+    height: auto;
+    object-fit: contain;
+}
+
+.sec3-text {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.sec3-box h1 {
+    font-size: 60px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.1;
+    padding-bottom: 50px;
+}
+
+.sec3-box p {
+    font-size: 22px;
+    color: #ffffff;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    max-width: 100%;
+    line-height: 1.5;
+}
+
+.sec3-box .boton {
+    display: inline-block;
+    background-color: #f3d06a; 
+    color: #333333;
+    padding: 15px 45px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 18px;
+    transition: 0.3s ease;
+}
+/*Inicio de la cuarta sección OUR STATISTICS*/
+.sec4-box {
+    width: 100%;
+    min-width: 1440px;
+    min-height: 1200px;
+    background-image: url('./images/Design 3.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+}
+
+.sec4-content {
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.sec4-content h1 {
+    font-size: 70px;
+    font-weight: 700;
+    color: #313131;
+    margin-bottom: 20px;
+    line-height: 1.1;
+}
+
+.sec4-content p {
+    font-size: 22px;
+    color: #313131;
+    max-width: 800px;
+    margin-top: 20px;
+    padding: 50px 0;
+    line-height: 1.4;
+}
+
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    width: 300%;
+}
+
+.stat1, .stat2, .stat3 {
+    width: 450px;
+    height: 450px;
+    border: 10px solid #333333;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.stat1 h2, .stat2 h2, .stat3 h2 {
+    font-size: 80px;
+    font-weight: 700;
+    color: #333333;
+    margin: 0;
+    padding: 30px 0;
+}
+
+.stat1 p, .stat2 p, .stat3 p {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.8;
+    font-weight: 700;
+    color: #333333;
+    margin: 0;
+
+}
+/*Inicio de la quinta sección CHICKEN SATAY*/
+.sec5-box {
+    width: 100%;
+    min-width: 1440px;
+    min-height: 1200px;
+    background-image: url('./images/Design 4.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 0;
+    text-align: center;
+}
+.sec5-content{
+    display: flex;
+    flex-direction: row-reverse; /* esto es para alinear la imagen a la izquierda */
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    gap: 50px;
+}
+.sec5-content img {
+    width: 500px;
+    height: auto;
+    object-fit: contain;
+}
+.sec5-text {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+}
+.sec5-box h1 {
+    font-size: 60px;
+    font-weight: 700;
+    color: #fff;
+    padding-bottom: 50px;
+    line-height: 1.1;
+}
+.sec5-box p {
+    font-size: 24px;
+    color: #ffffff;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    max-width: 100%;
+    line-height: 1.5;
+}
+/*Inicio de la sexta sección LUELLA HARRIS*/
+.sec6-box{
+    width: 100%;
+    min-width: 1440px;
+    min-height:1000px;
+    background-image: url('./images/Luela Harris.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0;
+    
+}
+.sec6-content {
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.sec6-content img {
+    width: 300px;
+    height: auto;
+    margin-bottom: 30px;
+}
+.sec6-box h1 {
+    font-size: 50px;
+    font-weight: 700;
+    color: #333333;
+
+}
+.sec6-box p {
+    font-size: 30px;
+    color: #333333;
+    max-width: 700px;    
+    margin-top: 20px;
+    padding-bottom: 50px;
+    line-height: 1.4;
+}
+/*Inicio de la séptima sección DON´T MISS OUR UPDATE*/
+.sec7-box {
+    width: 100%;
+    min-width: 1440px;
+    min-height: 1000px;
+    background-image: url('./images/Design FINAL.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+.sec7-content {
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.sec7-box h1 {
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 1.8;
+    color: #333333;
+    margin:auto 
+}
+.sec7-box p {
+    font-size: 30px;
+    color: #333333;
+    max-width: 800px;
+    margin-top: 50px;
+    padding-bottom: 50px;
+    line-height: 1.4;
+}
+.sec7-content input {
+    width: 550px;
+    padding: 15px 15px;
+    font-size: 20px;
+    border:none ;
+   
+}
+.sec7-content .boton {
+    padding: 15px 40px;
+    font-size: 24px;
+    line-height: 1.8;
+    background-color: #333333;
+    color: #fff;
+}  
+
+.subscribe-form { 
+ display: flex; 
+ justify-content: center;
+ align-items: stretch;
+} 
+
+/* Estilos del Footer,parte final */
+.footer {
+    width: 100%;
+    min-width: 1440px;
+    min-height: 1000px;
+    background-color: #333333;
+    display: flex;
+    justify-content: center;
+    padding: 100px 0;
+} 
+.footer-content {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: auto;
+    padding: 0 20px;
+   
+}
+
+.footer-right {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+}
+.footer-left h2 {
+    font-size: 40px;
+    font-weight: 300;
+    color: #fff;
+    margin-right: 50px;
+    padding: auto;
+}
+.footer-col h2 {
+    font-size: 30px;
+    font-weight: 300;
+    color: #fff;
+    margin-bottom: 25px;
+}
+.footer p {
+    font-size: 18px;
+    color: #fff;
+    line-height: 1.8;
+    margin-bottom: 10px;
+}  
+.footer-left p {
+    max-width: 500px;
+}
+.social {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+.social a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    color: #333333;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+
+
+
