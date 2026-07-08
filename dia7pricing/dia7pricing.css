@@ -12,6 +12,9 @@
     font-family: NexaLight;
     src: url(../Fonts/Nexa\ Light.otf);
 }
+body{
+    background:teal;
+}
 /*Estilo pricing*/
 .pricing{
     width: 100vw;
