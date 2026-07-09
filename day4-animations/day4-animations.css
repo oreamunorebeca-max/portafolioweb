@@ -1,0 +1,189 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    background: #000;
+}
+h2{
+    font-size: 60px;
+    margin: 50px;
+    color: lavender;
+}
+.loader{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 10px solid darkgray;
+    margin: auto;
+    border-top: 10px solid #fff;
+    animation: girar 0.5s linear infinite;
+    
+}
+@keyframes girar {
+    from{
+        transform: rotate(0deg );
+    }
+    to{
+        transform: rotate(360deg);
+    }
+    
+}
+.aparece h2{
+    color: aqua;
+    font-size: 80px;
+}
+.aparece{
+    animation: aparece 1s infinite;
+}
+
+@keyframes aparece {
+   0%{
+    opacity: 0;
+   }
+   100%{
+    opacity: 1;
+   }
+}
+.temblor h2{
+    color: darkmagenta;
+}
+/*temblor{
+    animation: temblor 0.2s infinite; */
+
+
+@keyframes temblor {
+    0%{
+        transform: translateX(0);
+    }
+    25%{
+        transform: translateX(-5px);
+    }
+    50%{
+        transform: translateX(5px);
+    }
+    75%{
+        transform: translateX(-5px);
+    }
+    0%{
+        transform: translateX(0);
+    }
+}
+.cargando{
+    width: 500px;
+    height: 20px;
+    background: greenyellow;
+    animation: cargar 1s forwards infinite;
+}
+.barra{
+    width: 500px;
+    height: 20px;
+    background: #ccc;
+}
+@keyframes cargar {
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 500px;
+    }
+}
+.escribir{
+    color: aquamarine;
+    font-family: monospace;
+    border-right: 4px solid lightcyan;
+    width: 0;
+    margin: auto;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: escribir 4s steps(20) forwards infinite;
+}
+
+@keyframes escribir {
+    0%{
+        width: 0;
+        border-color: #000;
+    }
+    99%{
+        border-color:#000;
+    }
+    100%{
+        width: 20ch;
+        border-color: transparent;
+    }
+    
+}.gradient{ 
+    width: 100%;
+    height: 100vh;
+    background: #3F5EFB;
+    background: radial-gradient(circle, rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 100%);
+    background-size: 600% 600%;
+    animation: fondo 10s ease infinite;
+}
+@keyframes fondo {
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
+
+.fondo{
+    width: 100%;
+    height: 400px;
+    background: lightseagreen;
+    overflow: hidden;
+    position: relative;
+}
+.objeto{
+    width: 200px;
+    height: 60px;
+    background: orchid;
+    position: absolute;
+    top: 150px;
+    left: -250px;
+    animation: movimiento 3s linear infinite;
+}
+@keyframes movimiento {
+    0%{
+        left: -250px;
+    }
+    100%{
+        left: 100%
+    }
+}
+
+.fondo2{
+    width: 100%;
+    height: 100vh;
+    background-image: url(https://hdwallpaperim.com/wp-content/uploads/2017/08/24/103746-Fallout_4.jpg);
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+}
+.objeto2{
+    width: 300px;
+    height: 80px;
+    background-image:url(images/Nave.png);
+    background-size: cover;
+    position: absolute;
+    top: 250px;
+    left: -250px;
+    animation: movimiento 10s linear infinite;
+}
+@keyframes movimiento{
+    0%{
+        left: -250px;
+    }
+    100%{
+        left: 100%;
+    }
+}

@@ -1,0 +1,691 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Montserrat", sans-serif;
+}
+/*----------------------------------Variables--------------------------------*/
+:root{
+    --font-family: "Montserrat", sans-serif;
+    --color-principal: #01447b;
+    --color-secundario: #f4903a;
+    --color-gris: #b3b3b3;
+    --color-blanco: #fff;
+    --color-negro: #1a1a1a;
+    --padding-section: 110px;
+    --padding-textos: 0  0 50px 0;
+    --padding-a: 10px 40px;
+    --padding-social: 10px 110px;
+    --padding-header: 40px 110px;
+    --margin: 50px;
+    --gap: 30px;
+    --h1: 100px;
+    --h2-section: 70px;
+    --h2-logo: 40px;
+    --cuerpo: 20px;
+    --enlaces: 20px;
+    --border-radius: 30px;
+    --circulo: 50%;
+    /*variables responsive*/
+    --padding-header-r: 20px 50px;
+    --h2-logo-r: 30px;
+    --padding-a-r: 10px 30px;
+    --padding-section-r: 50px;
+    --h1-r: 60px;
+    --h2-section-r:50px;
+}
+/*----------------------------------Redes sociales--------------------------------*/
+.social{
+    width: 100%;
+    height: auto;
+    background: var(--color-gris);
+    padding: var(--padding-social);
+    display: flex;
+    justify-content: end;
+    gap: var(--gap);
+}
+.social div{
+    width: 30px;
+    height: 30px;
+    border-radius: var(--circulo);
+    background: var(--color-principal);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-blanco);
+}
+/*----------------------------------Header--------------------------------*/
+header{
+    width: 100%;
+    height: auto;
+    padding: var(--padding-header);
+    background: var(--color-principal);
+    color: var(--color-blanco);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--gap);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+}
+header h2{
+    font-size: var(--h2-logo);
+    font-weight: 900;
+    gap: var(--gap);
+}
+header nav{
+    display: flex;
+    gap: var(--gap);
+}
+header nav a{
+    text-decoration: none;
+    color: var(--color-blanco);
+    font-weight: 600;
+    font-size: var(--cuerpo);
+}
+.buscador{
+    background: var(--color-blanco);
+    padding: var(--padding-a);
+    border-radius: var(--border-radius);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--gap);
+    color: var(--color-principal);
+    font-size: var(--cuerpo);
+}
+.buscador input{
+    border: none;
+    outline: none;
+    font-family: var(--font-family);
+    font-size: var(--cuerpo);
+    color: var(--color-negro);
+}
+.buscador input::placeholder{
+    font-family: var(--font-family);
+    font-size: var(--cuerpo);
+}
+/*----------------------------------Header--------------------------------*/
+.hero{
+    width: 100%;
+    height: calc(100vh - 180px);
+    background: #C29BDE;
+    background: linear-gradient(120deg, rgba(194, 155, 222, 1) 0%, rgba(244, 144, 58, 1) 50%, rgba(253, 203, 1, 1) 100%);
+    background-size: 600% 600%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fondo 5s ease infinite;
+}
+@keyframes fondo {
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
+.hero-blanco{
+    width: 100%;
+    height: 100%;
+    background: var(--color-blanco);
+    clip-path: polygon(100% 0, 30% 100%, 100% 100%);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+}
+.hero-box{
+    display: flex;
+    gap: var(--gap);
+    position: absolute;
+    padding: var(--padding-section);
+    justify-content: center;
+}
+.hero-box-txt{
+    width: 50%;
+}
+h1{
+    color: var(--color-principal);
+    font-size: var(--h1);
+    font-weight: 900;
+    padding: var(--padding-textos);
+    margin-right: 30px;
+    padding-left: 0px;
+    
+}
+.hero-box p{
+    width: 80%;
+    color: var(--color-blanco);
+    font-size: var(--cuerpo);
+    padding: var(--padding-textos);
+    z-index: 100;
+    top: 0;
+
+}
+.hero-box a{
+    background: var(--color-blanco);
+    color: var(--color-principal);
+    padding: var(--padding-a);
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    font-size: var(--enlaces);
+    font-weight: 900;
+}
+.hero-box-img{
+    width: 360px;
+    height: 610px;
+}
+.bars{
+    font-size: var(--cuerpo);
+    display: none;
+    cursor: pointer;
+}
+/*-----------------------------------------Servicios--------------------------------*/
+.servicios{
+    width: 100%;
+    height: auto;
+    padding: var(--padding-section);
+    background: var(--color-principal);
+    color: var(--color-blanco);
+    display: flex;
+    flex-direction: column;
+    grid-area: var(--gap); 
+    text-align: center;   
+}
+.servicios h2{
+    font-size: var(--h2-section);
+    font-weight: 900;
+}
+.servicios p{
+    width: 50%;
+    padding: 20px;
+    margin: auto;
+    font-size: 16px;
+}
+.servicios-grid{
+    width: 80%;
+    height: 850px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 230px) 110px;
+    /*grid-template-areas: 
+                        "a b c"
+                        "a e f"
+                        "d e g"
+                        "d e h";*/
+
+                
+    gap: var(--gap);
+}
+.bg{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+.bg:hover{
+    opacity: 1;
+}
+.bg p{
+    font-size: var(--cuerpo);
+    font-weight: 900;
+}
+.servicios-grid > div{
+    position: relative;
+    background-size: cover;
+    background-position: center;
+}
+
+.grid1{
+    /*grid-area: a;*/
+    grid-area: 1/ 1 / 3/ 2;
+    background: url(https://imageservice.asgoodasnew.com/1000/15888/14/title-0000.jpg);
+    
+}
+.grid2{
+    /*grid-area: b;*/
+    grid-area: 1 / 2/ 2 / 3;
+    background: url(https://media.gq.com.mx/photos/68cc6f53b1e9bbeb67d1e395/16:9/w_2560%2Cc_limit/Ilustracio%25CC%2581n_iPhone_Air%2520.jpg);
+}
+.grid3{
+    /*grid-area: c;*/
+    grid-area: 1 / 3 / 2 / 4;
+    background: url(https://macservicebcn.com/tienda/wp-content/uploads/2024/10/iphone-16-todos.jpg);
+}
+.grid4{
+    /*grid-area: d;*/
+    grid-area: 3 / 1 / 5 / 2;
+    background: url(https://media.wired.com/photos/68d1e224d4f5f78f3b59aa43/4:3/w_640%2Cc_limit/iPhone%252017%2520SOURCE%2520Julian%2520Chokkattu.jpg);
+
+}
+
+.grid5{
+    /*grid-area: e;*/
+    grid-area: 2 / 2 / 5/ 3;
+    background: url(https://i.blogs.es/d69481/iphone-14-00-01/1366_2000.jpg);
+
+}
+.grid6{
+    /*grid-area: f;*/
+    grid-area: 2 / 3 / 3 / 4;
+    background: url(https://i.blogs.es/a57a3e/iphone-16-analisis-10/500_333.jpeg);
+
+
+}
+.grid7{
+    /*grid-area: g;*/
+    grid-area: 3 / 3 / 4 / 4;
+    background: url(https://i.blogs.es/c1da7b/iphone-18-portada/650_1200.webp);
+
+}    
+.grid8{
+    /*grid-area: ;*/
+    grid-area: 4 / 3 / 5 / 4 ;
+
+}
+.grid8 a{
+    background: var(--color-secundario);
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: var(--color-blanco);
+    font-size: var(--enlaces);
+    font-weight: 900;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.grid8 a::after{
+    content: "\f061";
+    font-family: "Font Awesome 5 Free"; /*Font Awesome 6 Free*/
+    font-size: var(--cuerpo);
+    font-weight: 900; /*Obligatorio para Font Awesome 5/6 Free*/
+    margin-left: 10px; /*Opcional: Espacio entre texto e ícono */
+}
+/*----------------------------------Portafolio--------------------------------*/
+.portafolio{
+    width: 100%;
+    height: auto;
+    padding: var(--padding-section);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+    color: var(--color-principal);
+}
+.portafolio h2{
+    font-size: var(--h2-section);
+    font-weight: 900;
+}
+.portafolio > p{
+    width: 30%;
+    margin: auto;
+    font-size: var(--cuerpo);
+}
+.portafolio-box{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    flex-wrap: wrap;
+    gap: var(--gap);    
+}
+
+.item-img{
+    min-width: 250px;
+    height: 100%;
+}
+.img1{
+    background: url(https://img.freepik.com/foto-gratis/retrato-mujer-americana_53876-34038.jpg?semt=ais_hybrid&w=740&q=80);
+    background-repeat: no-repeat;
+    background-size: cover;
+   
+  
+}
+.img2{
+    background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHRdd1_tscVvgo43jCBBDZZI224hu65seJcVSCM4THHg&s);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+    
+}
+.img3{
+    background: url(https://images.generated.photos/SjuKv9Sz8wkQuT4eeN_7FaoE09Wq8j6qd8LeTkcrjCA/rs:fit:256:256/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy92M18w/NzAzNTU3LmpwZw.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.img4{
+    background: url(https://images.generated.photos/0BYlWfxMrOLfjj3NHJRVRxgxgSLqpdX15HhOm9HEJ4E/rs:fit:256:256/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy92M18w/MTk0MDE2LmpwZw.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.img5{
+    background: url(https://cdn.shopify.com/s/files/1/0639/1237/8602/files/Classic_Undercut_Oval_Face_Shape_Hairstyles_Male_with_Beard_2_480x480.webp?v=1750931410);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.img6{
+    background: url(https://media.istockphoto.com/id/1335941248/photo/shot-of-a-handsome-young-man-standing-against-a-grey-background.jpg?s=612x612&w=0&k=20&c=JSBpwVFm8vz23PZ44Rjn728NwmMtBa_DYL7qxrEWr38=);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.item-txt{
+    text-align: left;
+}
+.portafolio-box-item {
+    width: calc(50%-15px);
+    max-width: 600px;
+    display: flex;
+    border: 2px solid var(--color-principal); 
+    transform: translateY(0);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    transition: all 0.3s ease;
+}
+.portafolio-box-item:hover{
+    transform: translateY(-20px);
+    box-shadow: 0 20px 15px rgba(0, 0, 0, 0.3);
+}
+
+.item-txt{
+    text-align: left;
+    padding: 25px;
+    font-size: var(--cuerpo);
+}
+.star{
+    color: var(--color-secundario);
+}
+.item-txt p{
+    margin-top: 20px;
+}
+.item-txt h3{
+    font-weight: 900;
+}
+.item-txt a{
+    color: var(--color-secundario);
+    text-decoration: none;
+    font-weight: 900;
+}
+/*----------------------------------Ubicación--------------------------------*/
+.ubicacion{
+    width: 100%;
+    height: 900px;
+}
+.mapa{
+    width: 100%;
+    height: 550px;
+}
+.ubicacion-txt{
+    width: 70%;
+    max-width: 1200px;
+    height: 360px;
+    background: var(--color-principal);
+    padding: var(--padding-header);
+    color: var(--color-blanco);
+    text-align: center;
+    margin: auto;
+    transform: translateY(0);
+    transition: all 0.5s ease;
+}
+.subir{
+    transform: translateY(-150px);
+}
+.ubicacion-txt h2{
+    font-size: var(--h2-section);
+    font-weight: 900;
+}
+.ubicacion-txt p{
+    font-size: var(--cuerpo);
+    margin: auto;
+}
+footer{
+    width: 100%;
+    height: auto;
+    background: var(--color-negro);
+    padding: var(--h2-section);
+    display: flex;
+    justify-content: space-between;
+    color: var(--color-blanco);
+    font-size: var(--cuerpo);
+    gap: var(--gap);
+}
+.footer > div{
+    width: 33%;
+}
+.footer1 h2{
+    font-size: var(--h2-logo);
+    padding: var(--padding-textos);
+    font-weight: 900;
+}
+.footer2{
+    display: flex;
+    justify-content: center;
+}
+.footer2 a{
+    color: var(--color-blanco);
+    text-decoration: none;
+}
+.footer2 p{
+    margin: 10px 0;
+}
+.footer3{
+    display: flex;
+    justify-content: center;
+}
+.footer3 h3{
+    padding: var(--padding-textos);
+}
+.footer3 input{
+    background: var(--color-blanco);
+    padding: var(--padding-a);
+    border-radius: var(--border-radius);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--gap);
+    color: var(--color-principal);
+    font-size: var(--cuerpo);
+    outline: none;
+    border: none;
+}
+.footer3 button{  
+    background: var(--color-secundario);
+    color: var(--color-blanco);
+    padding: var(--padding-a);
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    font-size: var(--enlaces);
+    font-weight: 900;
+    margin-top: 20px;
+    cursor: pointer;
+}
+footer h3{
+    font-weight: 900;
+}
+/*Para que aparezca el menu responsive*/
+.mostrar{
+    left: 0;
+}
+/*----------------------------------Media queries--------------------------------*/
+@media (max-width: 700px) {
+header{
+    padding: var(--padding-header-r);
+} 
+
+header nav{
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    top: 80px;
+    left:100%;
+    background: var(--color-principal);
+    text-align: center;
+    padding: var(--padding-section);
+    transition: all 0.5s ease;
+}
+header nav a{
+    padding: var(--padding-textos);
+}
+.buscador{
+    padding: var(--padding-a-r);
+}
+.buscador input{
+    width: 100px;
+}
+header h2{
+    font-size: var(--h2-logo-r);
+}
+.bars{
+    display: block;
+}
+.hero-box{
+    padding: var(--padding-section-r);
+    flex-direction: column;
+    top: 50px;
+}
+h1{
+    font-size: var(--h1-r);
+
+}
+.hero-box-txt{
+    width: 100%;
+}
+.hero-box-img img{
+    width: 220px;
+    margin-top: 30px;
+}
+.hero-blanco{
+    clip-path: polygon(100% 25%, 21% 100%, 100% 100%);
+}
+/*Servicios*/
+.servicios{
+    padding: var(--padding-section-r);
+}
+.servicios h2{
+    font-size: var(--h2-section-r);
+}
+.servicios p{
+    width: 100%;
+}
+.servicios-grid{
+    width: 100%;
+    height: auto;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 180px repeat(2, 240px) 180px repeat(2, 80px);
+    grid-template-areas: 
+                        "a b"
+                        "a e"
+                        "d e"
+                        "c f"
+                        "g f"
+                        "g h";
+    gap: var(--gap);  
+}
+.grid1{
+    grid-area: a;
+    /*grid-area: 1/ 1 / 3/ 2;*/
+    background: url(https://imageservice.asgoodasnew.com/1000/15888/14/title-0000.jpg);
+    
+}
+.grid2{
+    grid-area: b;
+    /*grid-area: 1 / 2/ 2 / 3;*/
+    background: url(https://media.gq.com.mx/photos/68cc6f53b1e9bbeb67d1e395/16:9/w_2560%2Cc_limit/Ilustracio%25CC%2581n_iPhone_Air%2520.jpg);
+}
+.grid3{
+    grid-area: c;
+    /*grid-area: 4 / 1 / 5 / 2;*/
+    background: url(https://macservicebcn.com/tienda/wp-content/uploads/2024/10/iphone-16-todos.jpg);
+}
+.grid4{
+    grid-area: d;
+    /*grid-area: 3 / 1 / 4 / 2;*/
+    background: url(https://media.wired.com/photos/68d1e224d4f5f78f3b59aa43/4:3/w_640%2Cc_limit/iPhone%252017%2520SOURCE%2520Julian%2520Chokkattu.jpg);
+
+}
+
+.grid5{
+    grid-area: e;
+    /*grid-area: 2 / 2 / 4 / 3;*/
+    background: url(https://i.blogs.es/d69481/iphone-14-00-01/1366_2000.jpg);
+
+}
+.grid6{
+    grid-area: f;
+    /*grid-area: 4 / 2 / 6 / 3;*/
+    background: url(https://i.blogs.es/a57a3e/iphone-16-analisis-10/500_333.jpeg);
+}
+.grid7{
+    grid-area: g;
+    /*grid-area: 5 / 1 / 7 / 2;*/
+    background: url(https://i.blogs.es/c1da7b/iphone-18-portada/650_1200.webp);
+
+}    
+.grid8{
+    grid-area: h;
+    /*grid-area: 6 / 2 / 7 / 3 ;*/
+
+/*Portafolio*/
+}
+portafolio{
+    padding: var(--padding-section-r);
+}
+.portafolio h2{
+    font-size: var(--h2-section-r);
+}
+.portafolio > p{
+    width: 100%;
+}
+.portafolio-box-item{
+    width: 100%;
+}
+.item-img{
+    min-width: 200px;
+    height: 100%;
+}
+/*Ubicacion txt*/
+.ubicacion-txt{
+    width: 90%;
+    padding: var(--padding-header-r);
+}
+.ubicacion-txt h2{
+    font-size: var(--padding-section-r);
+    padding: var(--padding-textos);
+}
+footer {
+    flex-direction: column;
+}
+.footer2, .footer3{
+    justify-content: left;
+}
+.footer > div{
+    width: 100%;
+}
+.footer1, .footer2{
+    padding: var(--padding-textos);
+}
+}
+
