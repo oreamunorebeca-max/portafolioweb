@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>day2-DOM</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100%;
+            overflow-x: hidden;
+            font-family: sans-serif;
+        }
+
+        #header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: teal;
+            color: white;
+            padding: 15px 30px;
+            z-index: 1000;
+            transition: background 0.3s, color 0.3s;
+        }
+        
+        #header h3 {
+            font-size: 2rem;
+        }
+
+        section {
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding-top: 70px; 
+        }
+
+        h1 { font-size: 5rem; margin-bottom: 20px; }
+        h2 { font-size: 2.5rem; margin-bottom: 20px; }
+
+        input {
+            margin: 5px;
+            padding: 3px;
+            text-align: center;
+            border: 1px solid #777;
+        }
+
+        button {
+            padding: 4px 8px;
+            margin: 5px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            background: #efefef;
+            border: 1px solid #777;
+        }
+
+        p {
+            margin-top: 15px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #4b0082; 
+        }
+
+        .light p, .fondo p {
+            color: inherit; 
+            font-size: 1rem;
+            font-weight: normal;
+        }
+
+        .subir {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            font-size: 2.5rem;
+            display: none;
+            z-index: 1000;
+        }
+
+        .subir.mostrar {
+            display: block;
+        }
+
+        .subir a {
+            color: teal;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="arriba"></div>
+    <div class="subir">
+        <a href="#arriba"><i class="fa-solid fa-circle-up"></i></a>
+    </div>
+
+    <header id="header">
+        <h3>LOGO</h3>
+    </header>
+    
+    <section class="light" style="background: black; color: white;">
+        <h1>Cambio de color</h1>
+        <button id="btnlight" onclick="modoOscuro()">Modo Claro</button>
+    </section>
+    
+    <section class="usuario">
+        <h2>Escribe tu nombre:</h2>
+        <input type="text" id="usuario" placeholder="Nombre">
+        <br>
+        <button onclick="mostrarNombre()">saludar</button>
+        <p id="saludo"></p> 
+    </section>
+
+    <section class="calculo">
+        <h2>Sumando números</h2>
+        <input type="number" id="cifra1" placeholder="Número 1"><br>
+        <input type="number" id="cifra2" placeholder="Número 2">
+        <div>
+            <button id="btnSuma">Sumar</button>
+            <button id="btnResta">Restar</button>
+            <button id="btnMultiplicacion">Multiplicar</button>
+            <button id="btnDivision">Dividir</button>
+        </div>
+        <p id="resultadoSumar"></p>
+    </section>    
+        
+    <section class="fondo" style="background: white; color: black;">
+        <h2>Cambiar de color de fondo</h2>
+        <button id="btnColor">Cambiar color</button>
+        <p id="nombreColores"></p>
+    </section>
+
+    <section class="scroll">
+        <h2>Posición del scroll</h2>
+        <p id="scrollPosition"></p>
+    </section>
+
+    <script src="day2-DOM.js"></script>     
+</body>
+</html>
