@@ -1,0 +1,276 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family : Arial, Helvetica, sans-serif;
+}
+
+/*Estilos dia 4*/
+/*Ejemplo menu*/
+.hamburguesa{
+    width: 100%;
+    padding: 30px 50px;
+    background: teal;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 200;
+
+}
+#menu{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+nav li a{
+    text-decoration: none;
+    color: white;   
+    font-size: 1.2rem;
+}
+#bars{
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}    
+/*Media query para menu hamburguesa*/
+@media (max-width: 700px) {
+    #menu {
+      width: 100%;
+      position: fixed;
+      top: 100px;
+      left:100%;
+      background: teal;
+      flex-direction: column;
+      padding: 50px 0;
+      z-index: 10;
+      transition: all 0.3s ease;
+    }
+  
+    #bars{
+        display: block;
+    }
+    .mostrar{
+    left: 0 !important; 
+}
+}   
+/*Codigo ventana modal*/
+button{
+    padding: 10px 30px;
+    background: chocolate;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 30px;
+    cursor: pointer;
+}
+.modal{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}  
+.overlay{
+width: 100%;
+height: 100vh;
+background: rgba(0,0,0,0.5);
+position: fixed;
+top: 0;
+left: 0;
+/*efecto que desenfoca el fondo*/
+backdrop-filter: blur(5px);
+display: flex;
+justify-content: center;
+align-items: center;
+/*ocultar hasta ser llamado*/
+display: none;
+}        
+
+.caja-modal{
+    width: 90%;
+    max-width: 400px;
+    background: white;
+    padding: 20px ;
+    border-radius: 10px;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.5);
+    position: relative;
+}   
+.caja-modal h2{
+    margin-bottom: 20px;
+} 
+.caja-modal form input, 
+.caja-modal form textarea{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border: 1px solid teal;
+    resize: none;
+    
+   
+}    
+.btnCerrar{
+    padding: 10px 14px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}    
+
+/*codigo slider*/
+.slider{
+    width: 800px;
+    height: 600px;
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.slider-box{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    transition: all  0.5s ease;
+ 
+}
+.slider-box img, .slider-box video{
+    width: 800px; 
+    height: 600px;
+    object-fit: cover;
+}
+#btnPrev{
+    position: absolute;
+    z-index: 100;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 20px;
+}
+#btnNext{
+    position: absolute;
+    z-index: 100;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+}
+/*codigo barra progreso*/
+.barra-progreso{
+    width: 100%;
+    height: 8px;
+    background:  chocolate;
+    position: fixed;
+    top: 80px;
+    left: 0;
+    z-index:201;
+}
+.barrita{
+    width: 0;
+    height: 100%;
+    background: lawngreen;
+    transition: all 0.1s ease;
+}
+/*codigo galeria interactiva*/
+.interactiva{
+    width: 100%;
+    height: auto;
+    padding: 100px;
+    text-align: center;
+}
+.filtros{
+    margin: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+.fotos{
+    display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   gap: 30px;
+}
+.fotos img{
+    width: 350px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    cursor: cell;
+}
+.fotos img:hover{
+    transform: scale(103%);
+}
+
+
+/*Estilos lightbox*/
+
+.lightbox{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 300;
+    display: none;
+
+}
+.lightbox img{
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 10px;
+    border: 4px solid white;
+
+}
+/*Estilos contador*/
+
+.contenedor-padre {
+    display: flex;
+    justify-content: center; 
+    align-items: center;    
+    background: teal;       
+    width: 100%;
+    height: 500px;   
+    gap: 40px;             
+}
+
+
+.contador, .contador2, .contador3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+
+.counter {
+    width: 250px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    font-weight: 900;
+    color: teal;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+}
+
+
+
+
