@@ -1,0 +1,343 @@
+/* =====================
+   RESET
+===================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: "Montserrat", sans-serif;
+}
+/* ========================= HEADER ========================= */ 
+header{ 
+    width:100%; 
+    padding:30px; 
+    background:white; 
+    position:fixed; 
+    top:0; left:0; 
+    z-index:1000; 
+    transition:0.4s; } 
+/* Estilo al hacer scroll */ 
+header.scrolled{ 
+    background:black; } 
+/* Contenedor interno */ 
+.header-container{ 
+    max-width:1200px; 
+    margin:auto; 
+    display:flex; 
+    justify-content:space-between; 
+    align-items:center; gap:20px; 
+    position:relative; } 
+/* ========================= LOGO ========================= */ 
+.logo img{ 
+    width:180px; 
+    display:block; 
+    transition:0.4s; } 
+/* ========================= MENÚ ========================= */ 
+nav ul{ 
+    list-style:none; 
+    display:flex; 
+    gap:10px; } 
+nav a{ 
+    text-decoration:none; 
+    color:black; 
+    padding:12px 18px; 
+    border-radius:999px; 
+    transition:0.3s; } 
+/* Hover */ 
+nav a:hover{ 
+    background:#00bcd4; 
+    color:white; } 
+    /* Link activo */ 
+nav a.active{ 
+    background:#00bcd4; 
+    color:white; } 
+/* Menú blanco al hacer scroll */ 
+header.scrolled nav a{ 
+    color:white; } 
+header.scrolled nav a:hover{ 
+    background:#00bcd4; }
+header.scrolled nav a.active{ 
+    background:#00bcd4; } 
+/* ========================= BUSCADOR ========================= */ 
+.search-box{ 
+    background: #fff; 
+    border:2px solid black; 
+    border-radius:999px; 
+    padding:10px 15px; 
+    display:flex; 
+    align-items:center; 
+    gap:10px; } 
+.search-box input{ 
+    border:none; 
+    outline:none; }
+.search-box i{ 
+    color:black; } 
+/* ========================= MENÚ HAMBURGUESA ========================= */ 
+.menu-toggle{ 
+    display:none; 
+    font-size:28px; 
+    cursor:pointer; 
+    color:black; 
+    transition:0.3s; } 
+/* Cuando el header es negro */ 
+header.scrolled .menu-toggle{ 
+    color:white; } 
+/* ========================= SECCIONES DEMO ========================= */ 
+section{ 
+    min-height:100vh; 
+    padding:150px 50px; } 
+.hero{ 
+    background:#f4f4f4; } 
+.productos{ 
+    background:#ddd; } 
+.contacto{ 
+    background:#eee; } 
+.footer{ 
+    background:#ccc; }
+
+/* =====================
+   SLIDER
+===================== */
+
+.slider{
+    position:relative;
+    height:600px;
+    overflow:hidden;
+}
+
+.slide{
+    position:absolute;
+    inset:0;
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    align-items:center;
+
+    opacity:0;
+    transition:0.6s;
+}
+
+.slide.active{
+    opacity:1;
+}
+
+.slide::before{
+    content:"";
+    position:absolute;
+    inset:0;
+
+    background:rgba(0,0,0,.5);
+}
+
+.contenido{
+    position:relative;
+    z-index:2;
+
+    max-width:600px;
+    margin-left:8%;
+    color:white;
+}
+
+.contenido h1{
+    font-size:4rem;
+    margin-bottom:20px;
+}
+
+.contenido p{
+    font-size:1.1rem;
+    margin-bottom:30px;
+    line-height:1.6;
+}
+
+.botones{
+    display:flex;
+    gap:15px;
+}
+
+.btn{
+    text-decoration:none;
+    background:#1abc9c;
+    color:white;
+
+    padding:14px 25px;
+    border-radius:30px;
+
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+}
+
+.btn-secundario{
+    background:transparent;
+    border:1px solid white;
+}
+
+/* =====================
+   FLECHAS
+===================== */
+
+.flecha{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+
+    width:50px;
+    height:50px;
+
+    border:none;
+    cursor:pointer;
+
+    font-size:25px;
+
+    background:white;
+}
+
+#anterior{
+    left:20px;
+}
+
+#siguiente{
+    right:20px;
+}
+
+/* =====================
+   ESTADISTICAS
+===================== */
+
+.estadisticas{
+    background:#ececec;
+
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+
+    gap:20px;
+
+    padding:50px;
+}
+
+.item{
+    text-align:center;
+}
+
+.item h2{
+    font-size:3rem;
+    margin-bottom:10px;
+}
+
+/* =====================
+   RESPONSIVE
+===================== */
+
+
+@media(max-width:768px){
+    header{ 
+        padding:20px; } 
+    .menu-toggle{ 
+        display:block; } 
+    nav{ 
+        position:fixed;
+        top:73px; /* ajustar según altura del header */
+        left:0;
+        width:100vw;
+        background:white; 
+        overflow:hidden; 
+        max-height:0; 
+        transition:0.4s ease; 
+        box-shadow:0 10px 20px rgba(0,0,0,0.15); 
+        z-index: 999;
+    } 
+    /* Menú negro cuando cambia el header */ 
+    header.scrolled nav{ 
+        background:black; } 
+    nav.show{ 
+        max-height:400px; } 
+    nav ul{ 
+        flex-direction:column; 
+        align-items:center; 
+        gap:35px; 
+        padding:30px; } 
+    nav a{
+        width:100%; 
+        text-align:center; } 
+    .search-box{ 
+        display:none; }
+    .slider{
+        height:500px;
+    }
+
+    .contenido{
+        margin:20px;
+    }
+
+    .contenido h1{
+        font-size:2.3rem;
+    }
+
+    .botones{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .estadisticas{
+        grid-template-columns:1fr 1fr;
+    }
+
+    /* NUEVA POSICION DE LAS FLECHAS */
+
+    .flecha{
+        top:auto;                 /* elimina el centrado vertical */
+        bottom:50px;              /* separacion del borde inferior */
+        transform:none;           /* elimina translateY */
+    }
+
+    #anterior{
+        left:20px;
+    }
+
+    #siguiente{
+        right:20px;
+    }
+
+ .estadisticas{
+        grid-template-columns:1fr 1fr;
+    }
+}
+
+@media(max-width:500px){
+
+    .estadisticas{
+        grid-template-columns:1fr;
+    }
+}
+/* Corrección para el menú mobile */
+#nav {
+    transition: 0.4s ease;
+}
+
+@media(max-width:768px){
+    #nav {
+        position: fixed;
+        top: 80px; /* Ajusta según el alto de tu header */
+        left: -100%; /* Oculto a la izquierda */
+        width: 100%;
+        height: 100vh;
+        background: white;
+        display: flex;
+        justify-content: center;
+        padding-top: 50px;
+    }
+    #nav.show {
+        left: 0; /* Aparece al hacer click */
+    }
+    nav ul {
+        flex-direction: column;
+    }
+}
