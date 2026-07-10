@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="1er_exam.css">
+    <!-- Font Awesome --> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>1er_exam</title>
+</head>
+<body>
+    <!-- ========================= HEADER ========================= --> 
+     <header id="header"> 
+        <div class="header-container"> 
+        <!-- LOGO --> 
+         <div class="logo"> 
+            <img id="logo" src="images/logo1.png" alt="Logo"> 
+        </div> 
+        <!-- MENÚ --> 
+<nav id="nav"> 
+    <ul> 
+        <li> <a href="#inicio" class="active"> Inicio </a> </li> 
+        <li> <a href="#productos"> Productos </a> </li> 
+        <li> <a href="#tecnologia"> Tecnología </a> </li>
+        <li> <a href="#contacto"> Contacto </a> </li>
+    </ul> 
+</nav> 
+            <!-- BUSCADOR --> 
+            <div class="search-box"> 
+                <input type="text" placeholder="Buscar"> 
+                <i class="fa-solid fa-magnifying-glass"></i> 
+            </div> 
+            <!-- MENÚ MOBILE --> 
+             <div class="menu-toggle" id="menuToggle"> 
+                <i class="fa-solid fa-bars"></i> 
+            </div> 
+        </div> 
+    </header>
+
+    <!-- =====================
+         SLIDER
+    ====================== -->
+
+    <section class="slider" id="inicio">
+
+        <!-- Slide 1 -->
+        <div class="slide active"
+            style="background-image:url('https://picsum.photos/id/1015/1200/700');">
+
+            <div class="contenido">
+                <h1>Consultoría Empresarial</h1>
+
+                <p>
+                    Ayudamos a las empresas a crecer con estrategias
+                    modernas e innovadoras.
+                </p>
+
+                <div class="botones">
+                    <a href="#" class="btn">Contáctanos</a>
+                    <a href="#" class="btn btn-secundario">Servicios</a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="slide"
+            style="background-image:url('https://picsum.photos/id/1043/1200/700');">
+
+            <div class="contenido">
+                <h1>Soluciones Digitales</h1>
+
+                <p>
+                    Transformamos ideas en proyectos tecnológicos.
+                </p>
+
+                <div class="botones">
+                    <a href="#" class="btn">Más Información</a>
+                    <a href="#" class="btn btn-secundario">Ver Proyectos</a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="slide"
+            style="background-image:url('https://picsum.photos/id/1005/1200/700');">
+
+            <div class="contenido">
+                <h1>Impulsa tu Negocio</h1>
+
+                <p>
+                    Estrategias para aumentar productividad y ventas.
+                </p>
+
+                <div class="botones">
+                    <a href="#" class="btn">Comenzar</a>
+                    <a href="#" class="btn btn-secundario">Leer Más</a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Botones navegación -->
+
+        <button id="anterior" class="flecha">&#10094;</button>
+        <button id="siguiente" class="flecha">&#10095;</button>
+
+    </section>
+
+
+    <!-- =====================
+         ESTADISTICAS
+    ====================== -->
+
+    <div class="estadisticas">
+
+        <div class="item">
+            <h2 class="contador" data-numero="1500">0</h2>
+            <p>Clientes satisfechos</p>
+        </div>
+
+        <div class="item">
+            <h2 class="contador" data-numero="83">0</h2>
+            <p>Premios obtenidos</p>
+        </div>
+
+        <div class="item">
+            <h2 class="contador" data-numero="965">0</h2>
+            <p>Proyectos realizados</p>
+        </div>
+
+        <div class="item">
+            <h2 class="contador" data-numero="25">0</h2>
+            <p>Años de experiencia</p>
+        </div>
+
+    </div>
+    <!-- =========================
+     SECCIONES
+========================= -->
+
+<section id="productos" class="productos">
+    <h1>Sección 2</h1>
+    <p>Aquí inicia el cambio del header.</p>
+</section>
+
+<section id="tecnologia" class="contacto">
+    <h1>Sección 3</h1>
+</section>
+
+<section id="contacto" class="footer">
+    <h1>Sección 4</h1>
+</section>
+
+<script src="1er_exam.js"></script>
+
+</body>
+</html>
