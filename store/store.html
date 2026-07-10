@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>store</title>
+    <link rel="stylesheet" href="store.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Catálogo de <span>Bolsos</span></h1>
+    
+    <input type="text" id="buscador" placeholder="Buscar producto...">
+    
+    <select name="ordenar" id="ordenar">
+        <option value="">Ordenar por precio</option>
+        <option value="menor">Menor a mayor</option>
+        <option value="mayor">Mayor a menor</option>
+    </select>
+    
+    <div class="container" id="containerProductos"></div>
+
+    <script src="store.js"></script>
+</body>
+</html>
