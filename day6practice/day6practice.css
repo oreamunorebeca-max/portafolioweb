@@ -51,7 +51,7 @@ header ul a{
     width: 400px;
     height: 60px;
     border-radius: 100px;
-    background: #ed793c;  
+    background: #FF7F50;  
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -64,7 +64,7 @@ header ul a{
     height: 100%;
     border: none;
     outline: none;
-    background: #ed793c;
+    background: #FF7F50;
     color: white;
     font-size: 18px;
     font-family: "Montserrat", sans-serif;
@@ -118,7 +118,7 @@ h1{
 
 .hero-txt a{
 
-    background: #ed793c;
+    background: #FF7F50;
     text-decoration: none;
     font-size: 15px;
     color: white;
@@ -190,7 +190,7 @@ h2{
 
     width: 600px ;
     height: 700px;
-    background: #ed793c;
+    background: #FF7F50;
     position: absolute;
     top: 0;
     left: 0;
@@ -200,7 +200,7 @@ h2{
 
     text-decoration: none;
     color: #fff;
-    background: #ed793c;
+    background: #FF7F50;
     padding: 10px 40px;
     border-radius: 30px;
     display: inline-block;
@@ -211,7 +211,7 @@ h2{
 
     width: 100vw;
     height: 750px;
-    background: #ed793c;
+    background: #FF7F50;
 
 }
 
@@ -350,7 +350,7 @@ footer{
     margin-top: 50px;
 }
 .contacto button{
-    background: #ed793c;
+    background: #FF7F50;
     color: white;
     padding: 10px 40px;
     border-radius: 30px;
@@ -363,7 +363,7 @@ footer{
     padding-top: 100px;
 }
 .color2{
-    color: #ed793c;
+    color: #FF7F50;
 }
 
 
